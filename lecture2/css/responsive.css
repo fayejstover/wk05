@@ -23,7 +23,7 @@
     .grid {
         grid-template-columns: 45% 45%;
         gap: 10px;
-        justify-content: space-between;
+        justify-content: center; /* cahnged during lecture */
     } 
 
     /* 2-1-2-1 spanning pattern */
