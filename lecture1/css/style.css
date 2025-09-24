@@ -1,128 +1,84 @@
-/* Base section styling */
-section {
+  section{
     width: 90%;
     margin: auto;
     padding: 10px;
     border: 2px solid black;
     background-color: lightgray;
-}
+  }
 
-/* Part 1: Style the <dl> with Grid */
-.grid dl {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 10px;
-    justify-items: start;
-    margin: 10px 0;
-}
-
-.grid dt {
-    font-weight: bold;
-    color: #444;
-}
-
-.grid dd {
-    margin: 0;
-    color: #555;
-}
-
-/* Part 2: Style the .grid (character cards) */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    padding: 15px;
-    justify-content: center;
-    justify-items: center;
-}
-
-.grid div {
+  /* Character card styling */
+  .grid div {
     background: #f2f2f2;
     padding: 15px;
     text-align: center;
     border: 1px solid blue;
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 400px;
-}
-
-.grid img {
+  }
+  
+  /* Images */
+  .grid img {
     max-width: 100%;
     height: auto;
     border-radius: 25px;
-    box-sizing: border-box;
-}
+  }
 
-/* Style every other image (nth-child selector) */
-.grid div:nth-child(even) img {
-    filter: grayscale(100%);
-    border: 25px solid #ccc;
-}
+  .gallery img {
+    border: 3px yellow dashed;
+    border-radius: 50px;
 
-.grid h3 {
+  }
+  
+  /* Headings */
+  .character h3 {
     font-size: 1.2rem;
     margin: 10px 0;
     color: #333;
+  }
+    
+  .grid dt {
+    font-weight: bold;
+    color: #444;
+  }
+  
+  .grid dd {
+    margin: 0;
+    color: #555;
+  }
+  
+
+  /* **** Student code starts here */
+
+dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  text-align: left;
+  gap: 8px;
 }
 
-/* Part 3: Style the .gallery with Flex */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  padding: 15px;
+}
+
+.grid div:nth-of-type(even) img {
+  border: 25px solid black;
+  box-sizing: border-box;
+  filter: grayscale();
+}
+
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 24px;
+  justify-content: center;
 }
 
 .gallery img {
-    border: 3px yellow dashed;
-    border-radius: 50px;
-    transition: transform 0.3s ease;
-    box-sizing: border-box;
+  transition: 0.2s;
 }
 
 .gallery img:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
-    
-    section {
-        width: 95%;
-        padding: 5px;
-    }
-}
-
-@media (max-width: 480px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* **** Student code area for experimentation */
-
-/* Uncomment and experiment with these grid-template-columns values:
-.grid {
-    grid-template-columns: 400px;
-}
-
-.grid {
-    grid-template-columns: 1fr;
-}
-
-.grid {
-    grid-template-columns: 45% 45%;
-}
-
-.grid {
-    grid-template-columns: 1fr 1fr;
-}
-
-.grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
-}
-*/
